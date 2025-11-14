@@ -1,10 +1,37 @@
-import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CreateNotePage from "./pages/CreateNotePage";
+import EditNotePage from "./pages/EditNotePage";
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import ProtectedRoute from './components/ProtectedRoute';
+
 
 
 function App() {
   return (
-        <h1>HOLIII</h1>
-    
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<RegisterPage/>}/>
+
+
+        <Route path ="/" element={<ProtectedRoute><HomePage/></ProtectedRoute>
+
+        }
+        />
+        <Route path ="/create" element={<ProtectedRoute><CreateNotePage/></ProtectedRoute>
+
+        }
+        />
+        <Route path ="/edit/:id" element={<ProtectedRoute> <EditNotePage/> </ProtectedRoute>
+
+        }
+        />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 
