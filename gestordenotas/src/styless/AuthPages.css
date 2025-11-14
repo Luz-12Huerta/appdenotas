@@ -1,0 +1,88 @@
+/* Contenedor centrado */
+.auth-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Títulos */
+.auth-container h2 {
+    color: #ff4f81;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Inputs */
+.auth-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.auth-container input:focus {
+    border-color: #ff4f81;
+    box-shadow: 0 0 8px rgba(255,79,129,0.4);
+    outline: none;
+}
+
+/* Botones */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,79,129,0.3);
+}
+
+/* Texto de enlace */
+.auth-container p {
+    font-size: 14px;
+    color: #555;
+}
+
+.auth-container p a {
+    color: #ff4f81;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Animación suave al cargar */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+.auth-container {
+    animation: fadeIn 0.8s ease-in-out;
+}
